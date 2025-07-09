@@ -14,11 +14,11 @@
 #define LED_PIN 11 //
 #define MIC_PIN A0
 // sample and average defns
-#define PEAK 2.0 // Max brightness when volume >= continuousAvg * PEAK
+#define PEAK 1.9 // Max brightness when volume >= continuousAvg * PEAK
 #define VALLEY 0.7 // Min brightness when volume <= continuousAvg * VALLEY
 #define SAMPLE_TIME 20 // n milliseconds in volume sample in getVolume()
 #define WINDOW_SIZE 50 // n averages in continuous window
-#define RUNNING_ITERS 3 // n samples in local average in setup() and loop()
+#define RUNNING_ITERS 10 // n samples in local average in setup() and loop()
 /* Tunings:
  * - Arduino Uno (5V): 2.0, 0.7, 20, 50, 3
  */
