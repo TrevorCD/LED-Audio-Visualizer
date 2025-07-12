@@ -11,16 +11,17 @@
  */
 #define DEBUG 1
 // Arduino board pins
-#define LED_PIN 11 //
-#define MIC_PIN A0
+#define LED_PIN 11 // must be capable of PWM output
+#define MIC_PIN A0 // must allow analog reads
+#define BUTTON_PIN 5 // must have internal pullup
 // sample and average defns
 #define PEAK 1.9 // Max brightness when volume >= continuousAvg * PEAK
 #define VALLEY 0.7 // Min brightness when volume <= continuousAvg * VALLEY
-#define SAMPLE_TIME 20 // n milliseconds in volume sample in getVolume()
+#define SAMPLE_TIME 10 // n milliseconds in volume sample in getVolume()
 #define WINDOW_SIZE 50 // n averages in continuous window
 #define RUNNING_ITERS 10 // n samples in local average in setup() and loop()
 /* Tunings:
- * - Arduino Uno (5V): 2.0, 0.7, 20, 50, 3
+ * Arduino Uno: (5V): 2.0, 0.7, 20, 50, 3
  */
 
 /* ------------------------------- GLOBALS -------------------------------- */
@@ -29,6 +30,12 @@ unsigned long int continuousAvg;
 // window (buffer) of average values. Oldest value is replaced by newest value
 unsigned long int averageWindow[WINDOW_SIZE];
 int wx; // window index
+int mode = 0;
+/* Modes
+ * 0: Reacts to sound (default)
+ * 1: Solid color
+ *
+ */
 
 /* ------------------------------- HELPERS -------------------------------- */
 // returns the volume (amplitude) of MIC sampled for SAMPLE_ITERS times
@@ -71,7 +78,13 @@ void lightLed(unsigned long int volume, unsigned long int average) {
   Serial.print(average);
   #endif
 
-  int brightness = map(volume, average * VALLEY, average * PEAK, 0, 255);
+  int brightness;
+  switch(mode) {
+  case 1:
+	  brightness = 255;
+  default:
+	  brightness = map(volume, average * VALLEY, average * PEAK, 0, 255);
+  }
 
   brightness = constrain(brightness, 0, 255);
   analogWrite(LED_PIN, brightness);
@@ -88,6 +101,7 @@ void setup() {
   // pin init
   pinMode(LED_PIN, OUTPUT);
   pinMode(MIC_PIN, INPUT);
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
   #if DEBUG
   Serial.begin(9600);
   #endif
@@ -112,27 +126,37 @@ void setup() {
 }
 
 void loop() {
-  // Calculates innerAvg for RUNNING_ITERS. Replaces oldest averageWindow[]
-  // with innerAvg. Also lights LEDs with each new volume reading.
-  unsigned long int volume;
-  unsigned long int innerAvg = 0;
-  // calculate inner average
-  for(int j = 0; j < RUNNING_ITERS; j++) {
-    volume = getVolume();
-    innerAvg += volume;
-    // * by WINDOW_SIZE because continuousAvg is not / by WINDOW_SIZE
-    lightLed(volume * WINDOW_SIZE, continuousAvg); 
-  }
-  innerAvg /= RUNNING_ITERS;
-  // update continuousAvg and replace oldest value in window
-  continuousAvg -= averageWindow[wx];
-  continuousAvg += innerAvg;
-  averageWindow[wx] = innerAvg;
-  wx++;
-  if(wx == WINDOW_SIZE) {
-    wx = 0;
-    #if DEBUG & 2
-      Serial.println("Complete window refresh");
-    #endif
-  }
+	// Calculates innerAvg for RUNNING_ITERS. Replaces oldest averageWindow[]
+	// with innerAvg. Also lights LEDs with each new volume reading.
+	unsigned long int volume;
+	unsigned long int innerAvg = 0;
+	// calculate inner average
+	for(int j = 0; j < RUNNING_ITERS; j++) {
+		volume = getVolume();
+		innerAvg += volume;
+		// * by WINDOW_SIZE because continuousAvg is not / by WINDOW_SIZE
+		lightLed(volume * WINDOW_SIZE, continuousAvg); 
+	}
+	innerAvg /= RUNNING_ITERS;
+	// update continuousAvg and replace oldest value in window
+	continuousAvg -= averageWindow[wx];
+	continuousAvg += innerAvg;
+	averageWindow[wx] = innerAvg;
+	wx++;
+	if(wx == WINDOW_SIZE) {
+		wx = 0;
+        #if DEBUG & 2
+		Serial.println("Complete window refresh");
+        #endif
+	}
+	// switch modes if button is pressed
+	if(digitalRead(BUTTON_PIN) == LOW) {
+		switch(mode) {
+		case 0:
+			mode = 1;
+			break;
+		default:
+			mode = 0;
+		}
+	}
 }
