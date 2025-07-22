@@ -28,8 +28,8 @@ Notes:
 
 ## Electronic components
 
-1. Arduino Nano https://www.amazon.com/ATmega328P-Module-Micro-Controller-Arduino/dp/B0CM3C3FCZ
-2. MAX4466 https://www.amazon.com/Electret-Microphone-Amplifier-Adjustable-Breakout/dp/B08N4FNFTR
+1. Arduino Nano https://www.amazon.com/dp/B0CM3C3FCZ
+2. MAX4466 https://www.amazon.com/dp/B08N4FNFTR
 3. INIU portable charger https://www.amazon.com/dp/B09176JCKZ
 4. 10 ohm 5W resistor https://www.amazon.com/dp/B09X7G1H39
 5. 6x 3.0~3.2V/20mA LEDs
@@ -41,4 +41,4 @@ Notes:
 
 1. Transparent 1.75mm PLA https://www.amazon.com/dp/B07ZNG4L9P
 2. 6x M3 70mm machine screws with nuts https://www.amazon.com/dp/B07D4KLF5H
-3. Home depot painters pole
+3. 6-12 foot painter pole https://www.homedepot.com/p/Wooster-6-ft-12-ft-Sherlock-Extension-Pole-00R0560000/100132422
