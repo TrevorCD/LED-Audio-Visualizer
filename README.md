@@ -15,7 +15,6 @@ outputted to LEDs. It is intended for use inside of totems for music festivals.
 ## Usage
 
 1. Set pins in Config section of totem.ino the output pins on your arduino that you wish to use. LED_PIN must support PWM and MIC_PIN must allow analog reads.
-
 3. Follow circuit diagram for the most basic set up.
 
 ## Circuit
@@ -25,6 +24,7 @@ outputted to LEDs. It is intended for use inside of totems for music festivals.
 Notes:
 1. The 10 ohm resistor between the positive and negative usb power must be >= 5 watts. This resistor is there to ensure the portable battery does not auto shutoff
 2. The USB power icon refers to item 7 in electronic components
+3. Both the USB A cable end and the Arduino need to be plugged into the portable charger
 
 ## Electronic components
 
@@ -42,3 +42,12 @@ Notes:
 1. Transparent 1.75mm PLA https://www.amazon.com/dp/B07ZNG4L9P
 2. 6x M3 70mm machine screws with nuts https://www.amazon.com/dp/B07D4KLF5H
 3. 6-12 foot painter pole https://www.homedepot.com/p/Wooster-6-ft-12-ft-Sherlock-Extension-Pole-00R0560000/100132422
+4. All stl files in main/models/ printed (see notes)
+
+Notes:
+1. totemOrbFull.stl may be printed in two parts (totemOrbHalf*) to enable easier printing
+2. Only the totemOrb needs to be printed with transparent PLA; however, all pieces can be printed with transparent PLA
+
+## Construction
+
+
