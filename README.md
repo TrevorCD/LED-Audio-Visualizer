@@ -25,6 +25,7 @@ Notes:
 1. The 10 ohm resistor between the positive and negative usb power must be >= 5 watts. This resistor is there to ensure the portable battery does not auto shutoff
 2. The USB power icon refers to item 7 in electronic components
 3. Both the USB A cable end and the Arduino need to be plugged into the portable charger
+4. This circuit does not make use of the button feature
 
 ## Electronic components
 
