@@ -32,7 +32,7 @@ Notes:
 1. Arduino Nano https://www.amazon.com/dp/B0CM3C3FCZ
 2. MAX4466 https://www.amazon.com/dp/B08N4FNFTR
 3. INIU portable charger https://www.amazon.com/dp/B09176JCKZ
-4. 10 ohm 5W resistor https://www.amazon.com/dp/B09X7G1H39
+4. 10 ohm 5W resistor https://www.amazon.com/dp/B0DV3LVCJG
 5. 6x 3.0~3.2V/20mA LEDs
 6. 6x 100 ohm 1/4W 1% resistors
 7. USB A cable (with the other end stripped)
