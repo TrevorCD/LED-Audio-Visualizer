@@ -26,6 +26,7 @@ Notes:
 2. The USB power icon refers to item 7 in electronic components
 3. Both the USB A cable end and the Arduino need to be plugged into the portable charger
 4. This circuit does not make use of the button feature
+5. Depending on the LEDs you use, you may have to use different resistors. https://ledcalculator.net/ is a good resource for calculating which resistors you need.
 
 ## Electronic components
 
