@@ -28,9 +28,11 @@ unsigned long int getVolume() {
 	unsigned long int sample, volume;
 	int max = 0;
 	int min = 1023;
-	
+	///
 	unsigned long startTime = millis();
+	///
 	while(millis() - startTime < SAMPLE_TIME) {
+		///
 		sample = analogRead(MIC_PIN);
 		if(sample > max) {
 			max = sample;
@@ -65,6 +67,7 @@ int main() {
 	// set LED_PIN as output
 	LED_DDR |= (1 << LED_PIN);
 	// set MIC_PIN as input
+	/// add lines to enable ADC, select input channel
 	MIC_DDR &= (~(1 << LED_PIN));
 	///
 	digitalWrite(LED_PIN, HIGH);
