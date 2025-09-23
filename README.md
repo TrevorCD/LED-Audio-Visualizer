@@ -1,6 +1,6 @@
 # Sound-Reactive-Led-Totem
 
-![Constructed Project](constructed.jpg "Constructed Project")
+![Constructed Project](images/constructed.jpg "Constructed Project")
 
 ## Description
 
@@ -22,9 +22,9 @@ outputted to LEDs. It is designed for use inside of totems for music festivals.
 
 ## Circuit
 
-![Graphical Circuit Diagram](totem_circuit_diagram.png "Graphical Circuit Diagram")
+![Graphical Circuit Diagram](images/circuit_diagram.png "Graphical Circuit Diagram")
 
-![Circuit Schematic](totem_circuit_schematic.png "Circuit Schematic")
+![Circuit Schematic](images/circuit_schematic.png "Circuit Schematic")
 
 Notes:
 1. The 10 ohm resistor between the positive and negative usb power must be >= 5 watts. This resistor is there to ensure the portable battery does not auto shutoff
