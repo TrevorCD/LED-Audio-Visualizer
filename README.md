@@ -1,16 +1,19 @@
 # Sound-Reactive-Led-Totem
 
+![Constructed Project](constructed.jpg "Constructed Project")
+
 ## Description
 
 This project uses an arduino and MAX4466 to create sound reactivity that is
-outputted to LEDs. It is intended for use inside of totems for music festivals.
+outputted to LEDs. It is designed for use inside of totems for music festivals.
 
 ## Requirements
 
-1. Arduino with at least 4000 bytes of program storage, at least 500 bytes of dynamic memory, and 5V power.
-2. Electronic components (see below)
-3. 3D printer and chasis components (see below)
-4. Soldering iron
+1. Arduino with at least 4000 bytes of program storage, at least 500 bytes of dynamic memory, and 5V power. (Arduino Nano used)
+2. Arduino IDE and USB OR AVR programmer
+3. Electronic components (see below)
+4. 3D printer and chasis components (see below)
+5. Soldering iron
 
 ## Usage
 
@@ -19,7 +22,9 @@ outputted to LEDs. It is intended for use inside of totems for music festivals.
 
 ## Circuit
 
-![Circuit](totem_circuit.png)
+![Graphical Circuit Diagram](totem_circuit_diagram.png "Graphical Circuit Diagram")
+
+![Circuit Schematic](totem_circuit_schematic.png "Circuit Schematic")
 
 Notes:
 1. The 10 ohm resistor between the positive and negative usb power must be >= 5 watts. This resistor is there to ensure the portable battery does not auto shutoff
@@ -49,7 +54,3 @@ Notes:
 Notes:
 1. totemOrbFull.stl may be printed in two parts (totemOrbHalf*) to enable easier printing
 2. Only the totemOrb needs to be printed with transparent PLA; however, all pieces can be printed with transparent PLA
-
-## Construction
-
-
