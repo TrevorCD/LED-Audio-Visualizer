@@ -4,8 +4,10 @@
 
 ## Description
 
-This project uses an arduino and MAX4466 to create sound reactivity that is
-outputted to LEDs. It is designed for use inside of totems for music festivals.
+This project uses an Arduino Nano and a MAX4466 (electret microphone and amp) to drive LEDs in response to sound.
+To achieve this, the Arduino polls the MAX4466's analog output at 10hz (adjustable), placing the samples in a circular buffer, and using the stored values to calculate a continuous average.
+Each sample is used in proportion to the continuous average to calculate the PWM output into an NPN bipolar transistor which drives the LEDs in parallel.
+Custom 3D printed parts are used to house the electronics and battery.
 
 ## Requirements
 
@@ -13,7 +15,7 @@ outputted to LEDs. It is designed for use inside of totems for music festivals.
 2. Arduino IDE OR AVR programmer
 3. USB A to micro (for connection between microcontroller and PC during programming)
 4. Electronic components (see below)
-5. 3D printer and chasis components (see below)
+5. 3D printer and chassis components (see below)
 6. Soldering iron
 
 ## Usage
@@ -36,8 +38,8 @@ Notes:
 
 ## Electronic components
 
-1. Arduino Nano https://www.amazon.com/dp/B0CM3C3FCZ
-2. MAX4466 https://www.amazon.com/dp/B08N4FNFTR
+1. Arduino Nano (ATMega328) https://www.amazon.com/dp/B0CM3C3FCZ
+2. MAX4466 (electret microphone and amp) https://www.amazon.com/dp/B08N4FNFTR
 3. INIU portable charger https://www.amazon.com/dp/B09176JCKZ
 4. 10 ohm 5W resistor https://www.amazon.com/dp/B0DV3LVCJG
 5. 6x 3.0~3.2V/20mA LEDs
@@ -46,8 +48,7 @@ Notes:
 8. 5cm x 7cm PCB Board
 9. 2N2222 or any NPN Transistor
 
-## Chasis components
-
+## Housing components
 1. Transparent 1.75mm PLA https://www.amazon.com/dp/B07ZNG4L9P
 2. 6x M3 70mm machine screws with nuts https://www.amazon.com/dp/B07D4KLF5H
 3. 6-12 foot painter pole https://www.homedepot.com/p/Wooster-6-ft-12-ft-Sherlock-Extension-Pole-00R0560000/100132422
