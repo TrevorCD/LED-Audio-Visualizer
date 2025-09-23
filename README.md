@@ -43,6 +43,7 @@ Notes:
 6. 6x 100 ohm 1/4W 1% resistors
 7. USB A cable (with the other end stripped)
 8. 5cm x 7cm PCB Board
+9. 2N2222 or any NPN Transistor
 
 ## Chasis components
 
