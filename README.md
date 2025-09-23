@@ -10,10 +10,11 @@ outputted to LEDs. It is designed for use inside of totems for music festivals.
 ## Requirements
 
 1. Arduino with at least 4000 bytes of program storage, at least 500 bytes of dynamic memory, and 5V power. (Arduino Nano used)
-2. Arduino IDE and USB OR AVR programmer
-3. Electronic components (see below)
-4. 3D printer and chasis components (see below)
-5. Soldering iron
+2. Arduino IDE OR AVR programmer
+3. USB A to micro (for connection between microcontroller and PC during programming)
+4. Electronic components (see below)
+5. 3D printer and chasis components (see below)
+6. Soldering iron
 
 ## Usage
 
