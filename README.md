@@ -94,7 +94,7 @@ This technology performs best in high amplitude environments such as concerts or
    * For printing the orb in two pieces: Use supports on totemOrbHalfTop. Superglue the orb halves together once printed.
 
 #### II - Cable Setup
-***For Cable 1-6 and Soldering 1, refer to the [Cable Rerefence](#cable-reference-table) below.***
+***For Cable Setup 1-6, refer to the [Cable Rerefence](#cable-reference-table) below.***
 1. Cut Cable A such that there is 5 inches of length off of the USB-A end. On the other end, cut the connector off and leave at least 7 inches of length.
 2. Similarly, cut Cable B such that there is 5 inches of length off the USB-A end, and 5 inches of length off the USB-Mini end.
 3. On all 3 cable remenants with ports, strip the wire on the non-port end to expose 1.5 inches of the internal red and black wires. Do this to both sides of the Cable A half that does not have a port attached.
@@ -121,10 +121,6 @@ This technology performs best in high amplitude environments such as concerts or
 2. Insert the remaining three machine screws through the housing via the opening on totemBaseBottom, through all three totem base components.
 3. Set the totem orb on top of the base components, aligning it's screw holes with the base pieces'.
 4. Secure the whole housing together by screwing the nuts onto the ends of the machine screws.
-
-> [!WARNING]
-> The 10Ω resistor between the positive and negative USB wires ***must be ≥ 5 watts*** or you risk the resistor **exploding** or **catching fire**.  
-> ***ALSO***, you need **10Ω 5W resistors** in **BOTH** the USB cable powering the Arduino, **AND** the USB cable powering the LEDs.  
 
 <br>
 
@@ -188,6 +184,10 @@ B                              [USB-Mini]-[3.5" Jacket]-[1" Signal Wires]-[Resis
     </td>
   </tr>
 </table>
+
+> [!WARNING]
+> The 10Ω resistor between the positive and negative USB wires ***must be ≥ 5 watts*** or you risk the resistor **exploding** or **catching fire**.  
+> ***ALSO***, you need **10Ω 5W resistors** in **BOTH** the USB cable powering the Arduino, **AND** the USB cable powering the LEDs.  
 
 > [!NOTE]
 > The Pictoral Circuit Diagram is missing key information:  
