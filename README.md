@@ -81,19 +81,21 @@ This technology performs best in high amplitude environments such as concerts or
 2. With **transparent** PLA:
    * totemOrbFull.stl **- OR -** *both* totemOrbHalfBottom.stl *and* totemOrbHalfTop.stl <sub><sup>(with transparent PLA)</sup></sub>
 
+> [!WARNING]
+> The 10Ω resistor between the positive and negative USB wires ***must be ≥ 5 watts*** or you risk the resistor **exploding** or **catching fire**.  
+> ***ALSO***, you need **10Ω 5W resistors** in **BOTH** the USB cable powering the Arduino, **AND** the USB cable powering the LEDs.  
+
 <br>
 
 ## How to Build
 
-### Instructions
-
-#### I - Start Assembly
+### I - Initial Assembly
 1. Using the USB-A to Mini cable mentioned in the [Requirements](#requirements), connect the Arduino to your personal computer. Using ArduinoIDE, flash the Arduino with totem.ino. 
 2. 3D print all the necessary components. The totemBaseBottom, totemBaseMiddle, and totemBaseTop pieces do not need supports.
    * For printing the orb in one piece: Use supports on the inside of totemOrbFull, supporting the center.
    * For printing the orb in two pieces: Use supports on totemOrbHalfTop. Superglue the orb halves together once printed.
 
-#### II - Cable Setup
+### II - Cable Setup
 ***For Cable Setup 1-6, refer to the [Cable Rerefence](#cable-reference-table) below.***
 1. Cut Cable A such that there is 5 inches of length off of the USB-A end. On the other end, cut the connector off and leave at least 7 inches of length.
 2. Similarly, cut Cable B such that there is 5 inches of length off the USB-A end, and 5 inches of length off the USB-Mini end.
@@ -184,10 +186,6 @@ B                              [USB-Mini]-[3.5" Jacket]-[1" Signal Wires]-[Resis
     </td>
   </tr>
 </table>
-
-> [!WARNING]
-> The 10Ω resistor between the positive and negative USB wires ***must be ≥ 5 watts*** or you risk the resistor **exploding** or **catching fire**.  
-> ***ALSO***, you need **10Ω 5W resistors** in **BOTH** the USB cable powering the Arduino, **AND** the USB cable powering the LEDs.  
 
 > [!NOTE]
 > The Pictoral Circuit Diagram is missing key information:  
