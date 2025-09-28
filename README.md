@@ -16,6 +16,8 @@
   <br>
 </div>
 
+<br>
+
 ## Overview
 
 ### Requirements
@@ -124,46 +126,48 @@ This technology performs best in high amplitude environments such as concerts or
 > The 10Ω resistor between the positive and negative USB wires ***must be ≥ 5 watts*** or you risk the resistor **exploding** or **catching fire**.  
 > ***ALSO***, you need **10Ω 5W resistors** in **BOTH** the USB cable powering the Arduino, **AND** the USB cable powering the LEDs.  
 
+<br>
+
 ### Cable Reference Table
 
 #### Unmodified cables
 
 ```
-A                                                                          [USB-Mini Connector]=[10" Jacket]=[USB-A Connector]
+A                                                                                          [USB-Mini]-[10" Jacket]-[USB-A]
 ```
 ```
-B                                                                           [Any USB Connector]=[12" Jacket]=[USB-A Connector]
+B                                                                                          [Any USB ]-[12" Jacket]-[USB-A]
 ```
 
 #### Cable step 2: Both cables cut into separate ends, non USB-A connector cut off of cable A
 
 ```
-A                                                                                                [USB-A Connector]=[5" Jacket]
-.                                                                                                                  [7" Jacket]
+A                                                                                                      [USB-A]-[5" Jacket]
+.                                                                                                              [7" Jacket]
 ```
 ```
-B                                                                                             [USB-Mini Connector]=[5" Jacket]
-.                                                                                                [USB-A Connector]=[5" Jacket]
+B                                                                                                   [USB-Mini]-[5" Jacket]
+.                                                                                                      [USB-A]-[5" Jacket]
 ```
 
 #### Cable step 4: Cable jacket stripped to red and black signal wires, signal wires stripped to bare copper
 
 ```
-A                                                           [USB-A Connector]=[3.5" Jacket]=[1" Signal Wires]=[0.5" Bare Wire]
-.                                            [0.5" Bare Wire]=[1" Signal Wires]=[4" Jacket]=[1" Signal Wires]=[0.5" Bare Wire]
+A                                                                 [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
+.                                        [0.5" Bare Wire]-[1" Signal Wires]-[4" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
 ```
 ```
-B                                                        [USB-Mini Connector]=[3.5" Jacket]=[1" Signal Wires]=[0.5" Bare Wire]
-.                                                           [USB-A Connector]=[3.5" Jacket]=[1" Signal Wires]=[0.5" Bare Wire]
+B                                                              [USB-Mini]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
+.                                                                 [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
 ```
 
 #### Cable Step 6: Final cable configuration with 10Ω 5W resistors
 
 ```
-A  [0.5" Bare Wire]=[1" Signal Wires]=[4" Jacket]=[1" Signal Wires]=[Resist]=[1" Signal Wires]=[3.5" Jacket]=[USB-A Connector]
+A        [0.5" Bare Wire]-[1" Signal Wires]-[4" Jacket]-[1" Signal Wires]-[Resist]-[1" Signal Wires]-[3.5" Jacket]-[USB-A]
 ```
 ```
-B              [USB-Mini Connector]=[3.5" Jacket]=[1" Signal Wires]=[Resist]=[1" Signal Wires]=[3.5" Jacket]=[USB-A Connector]
+B                              [USB-Mini]-[3.5" Jacket]-[1" Signal Wires]-[Resist]-[1" Signal Wires]-[3.5" Jacket]-[USB-A]
 ```
 
 <br>
@@ -186,9 +190,9 @@ B              [USB-Mini Connector]=[3.5" Jacket]=[1" Signal Wires]=[Resist]=[1"
 </table>
 
 > [!NOTE]
-> Pictoral Diagram is missing key information:  
-> The USB power icon refers to Cable A and The Arduino needs to be plugged into the INIU portable via Cable B. Items 7, 3, 8 respectively in [Electronic Components](#electronic-components).
-> Both the USB cable to the Arduino and transistor need to have a 10Ω 5W resistor to prevent the INIU battery from performing automatic shutoff.  
+> The Pictoral Circuit Diagram is missing key information:  
+> - The USB power icon refers to Cable A and The Arduino needs to be plugged into the INIU portable via Cable B. See items 7, 3, 8 in [Electronic Components](#electronic-components).  
+> - Both the USB cable to the Arduino and transistor need to have a 10Ω 5W resistor to prevent the INIU battery from performing automatic shutoff.  
 
 > [!TIP]
 > Depending on the number and specs of the LEDs you use, you will likey have to use different resistors. You can use [this website](https://ledcalculator.net/) to calculate which resistors you need.  
