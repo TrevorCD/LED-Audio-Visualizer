@@ -30,7 +30,7 @@
 * 3D printer & slicer software
 * Soldering iron
 * Wire strippers / cutters
-* Electronic and chassis components [(see below)](#component-list)
+* Electronic and housing components [(see below)](#component-list)
 * Music
 
 ### Usage
@@ -118,9 +118,9 @@ This technology performs best in high amplitude environments such as concerts or
 
 ### V - Final Assembly
 1. Slide totemBaseBottom onto the end of the painter's pole so that the holes line up. Slide one of the M3 70mm machine screws through the holes and secure with the nut.
-2. Insert the remaining three machine screws through the chassis via the opening on totemBaseBottom, through all three totem base components.
+2. Insert the remaining three machine screws through the housing via the opening on totemBaseBottom, through all three totem base components.
 3. Set the totem orb on top of the base components, aligning it's screw holes with the base pieces'.
-4. Secure the whole chassis together by screwing the nuts onto the ends of the machine screws.
+4. Secure the whole housing together by screwing the nuts onto the ends of the machine screws.
 
 > [!WARNING]
 > The 10Ω resistor between the positive and negative USB wires ***must be ≥ 5 watts*** or you risk the resistor **exploding** or **catching fire**.  
