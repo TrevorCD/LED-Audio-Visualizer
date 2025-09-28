@@ -12,7 +12,7 @@
     Custom 3D printed parts are used to house the electronics and battery.
   </p>
   <br>
-  See it here: <a href="https://www.youtube.com/watch?v=eAFF40k64hU" target="_blank">Youtube Demo</a>
+  <a href="https://www.youtube.com/watch?v=eAFF40k64hU" target="_blank">See it in action!</a>
   <br>
 </div>
 
