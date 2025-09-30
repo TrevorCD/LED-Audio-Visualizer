@@ -137,31 +137,31 @@ This project is designed for high amplitude environemnts; subsequently, the ampl
 
 #### Unmodified cables
 
-&nbsp;&nbsp;A:&nbsp;&nbsp;[USB-A]-[12" Jacket]-[Any USB]
+&nbsp;&nbsp;&nbsp;&nbsp;A:&nbsp;&nbsp;[USB-A]-[12" Jacket]-[Any USB]
 
-&nbsp;&nbsp;B:&nbsp;&nbsp;[USB-A]-[10" Jacket]-[USB-Mini]
+&nbsp;&nbsp;&nbsp;&nbsp;B:&nbsp;&nbsp;[USB-A]-[10" Jacket]-[USB-Mini]
 
 #### Cable Setup step 2: Both cables cut into separate ends, non USB-A connector cut off of cable A
 
-&nbsp;&nbsp;A1: [5" Jacket]-[USB-A]  
-&nbsp;&nbsp;A2: [7" Jacket]
+&nbsp;&nbsp;&nbsp;&nbsp;A1: [5" Jacket]-[USB-A]  
+&nbsp;&nbsp;&nbsp;&nbsp;A2: [7" Jacket]
 
-&nbsp;&nbsp;B1: [5" Jacket]-[USB-A]  
-&nbsp;&nbsp;B2: [5" Jacket]-[USB-Mini]
+&nbsp;&nbsp;&nbsp;&nbsp;B1: [5" Jacket]-[USB-A]  
+&nbsp;&nbsp;&nbsp;&nbsp;B2: [5" Jacket]-[USB-Mini]
 
 #### Cable Setup step 4: Cable jacket stripped to red and black signal wires, signal wires stripped to bare copper
 
-&nbsp;&nbsp;A1: [0.5" Bare Wire]-[1" Signal Wires]-[3.5" Jacket]-[USB-A]  
-&nbsp;&nbsp;A2: [0.5" Bare Wire]-[1" Signal Wires]-[4" Jacket]-[1" Signal Wire]-[0.5" Bare Wire]
+&nbsp;&nbsp;&nbsp;&nbsp;A1: [0.5" Bare Wire]-[1" Signal Wires]-[3.5" Jacket]-[USB-A]  
+&nbsp;&nbsp;&nbsp;&nbsp;A2: [0.5" Bare Wire]-[1" Signal Wires]-[4" Jacket]-[1" Signal Wire]-[0.5" Bare Wire]
 
-&nbsp;&nbsp;B1: [0.5" Bare Wire]-[1" Signal Wires]-[3.5" Jacket]-[USB-A]  
-&nbsp;&nbsp;B2: [0.5" Bare Wire]-[1" Signal Wires]-[3.5" Jacket]-[USB-Mini]
+&nbsp;&nbsp;&nbsp;&nbsp;B1: [0.5" Bare Wire]-[1" Signal Wires]-[3.5" Jacket]-[USB-A]  
+&nbsp;&nbsp;&nbsp;&nbsp;B2: [0.5" Bare Wire]-[1" Signal Wires]-[3.5" Jacket]-[USB-Mini]
 
 #### Cable Setup Step 6: Final cable configuration with 10Ω 5W resistors
 
-&nbsp;&nbsp;A:&nbsp; [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[Resistor]-[1" Signal Wires]-[4" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
+&nbsp;&nbsp;&nbsp;&nbsp;A:&nbsp; [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[Resistor]-[1" Signal Wires]-[4" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
 
-&nbsp;&nbsp;B:&nbsp; [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[Resistor]-[1" Signal Wires]-[3.5" Jacket]-[USB-Mini]
+&nbsp;&nbsp;&nbsp;&nbsp;B:&nbsp; [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[Resistor]-[1" Signal Wires]-[3.5" Jacket]-[USB-Mini]
 
 <br>
 
