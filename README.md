@@ -138,41 +138,41 @@ This project is designed for high amplitude environemnts; subsequently, the ampl
 #### Unmodified cables
 
 ```
-A                                                                                          [USB-Mini]-[10" Jacket]-[USB-A]
+A                                                                                   [USB-Mini]-[10" Jacket]-[USB-A]
 ```
 ```
-B                                                                                          [Any USB ]-[12" Jacket]-[USB-A]
+B                                                                                    [Any USB]-[12" Jacket]-[USB-A]
 ```
 
 #### Cable Setup step 2: Both cables cut into separate ends, non USB-A connector cut off of cable A
 
 ```
-A1                                                                                                     [USB-A]-[5" Jacket]
-A2                                                                                                             [7" Jacket]
+A1                                                                                              [USB-A]-[5" Jacket]
+A2                                                                                                      [7" Jacket]
 ```
 ```
-B1                                                                                                  [USB-Mini]-[5" Jacket]
-B2                                                                                                     [USB-A]-[5" Jacket]
+B1                                                                                              [USB-A]-[5" Jacket]
+B2                                                                                           [USB-Mini]-[5" Jacket]
 ```
 
 #### Cable Setup step 4: Cable jacket stripped to red and black signal wires, signal wires stripped to bare copper
 
 ```
-A1                                                                [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
-A2                                       [0.5" Bare Wire]-[1" Signal Wires]-[4" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
+A1                                                         [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
+A2                                [0.5" Bare Wire]-[1" Signal Wires]-[4" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
 ```
 ```
-B1                                                             [USB-Mini]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
-B2                                                                [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
+B1                                                         [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
+B2                                                      [USB-Mini]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
 ```
 
 #### Cable Setup Step 6: Final cable configuration with 10Ω 5W resistors
 
 ```
-A        [0.5" Bare Wire]-[1" Signal Wires]-[4" Jacket]-[1" Signal Wires]-[Resist]-[1" Signal Wires]-[3.5" Jacket]-[USB-A]
+A [0.5" Bare Wire]-[1" Signal Wires]-[4" Jacket]-[1" Signal Wires]-[Resist]-[1" Signal Wires]-[3.5" Jacket]-[USB-A]
 ```
 ```
-B                              [USB-Mini]-[3.5" Jacket]-[1" Signal Wires]-[Resist]-[1" Signal Wires]-[3.5" Jacket]-[USB-A]
+B                       [USB-Mini]-[3.5" Jacket]-[1" Signal Wires]-[Resist]-[1" Signal Wires]-[3.5" Jacket]-[USB-A]
 ```
 
 <br>
