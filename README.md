@@ -29,7 +29,7 @@
 * Arduino programming
   * ArduinoIDE
   * USB-A to USB-Mini cable
-* 3D printer & slicer software
+* 3D printer and slicer software
 * Soldering iron
 * Wire strippers / cutters
 * Electronic and housing components [(see below)](#component-list)
@@ -100,7 +100,7 @@ This project is designed for high amplitude environemnts; subsequently, the ampl
    * For printing the orb in two pieces: Use supports on totemOrbHalfTop. Superglue the orb halves together once printed.
 
 ### II - Cable Setup
-***For Cable Setup 1-6, refer to the [Cable Rerefence](#cable-reference-table) below.***
+***For these steps, refer to the [Cable Rerefence](#cable-reference-table) below.***
 1. Cut Cable A such that there is 5 inches of length off of the USB-A end. On the other end, cut the connector off and leave at least 7 inches of length.
 2. Similarly, cut Cable B such that there is 5 inches of length off the USB-A end, and 5 inches of length off the USB-Mini end.
 3. On all 3 cable remenants with ports, strip the wire on the non-port end to expose 1.5 inches of the internal red and black wires. Do this to both sides of the Cable A half that does not have a port attached.
@@ -109,7 +109,7 @@ This project is designed for high amplitude environemnts; subsequently, the ampl
 6. Similarly, do this with the ends of both halves of Cable A on the other 10Ω 5W resistor.
 
 ### III - Wiring & Soldering
-***For the Soldering 1-4, refer to the [Schematics](#circuit-diagrams) for all wiring and soldering.***
+***For these steps, refer to the [Schematics](#circuit-diagrams) below.***
 1. Solder the 10Ω 5W resistor to the copper wire in the usb lines. You now have reconstructed Cable A and Cable B, but with a 10Ω 5W resistor in the line.
 2. Solder the Arduino, LEDs, 2N2222, and resistors to the PCB Board.
 3. Solder the red exposed wire of Cable A to the LEDs, and the black exposed wire to the 2N2222's emitter.
@@ -144,7 +144,7 @@ A                                                                               
 B                                                                                          [Any USB ]-[12" Jacket]-[USB-A]
 ```
 
-#### Cable step 2: Both cables cut into separate ends, non USB-A connector cut off of cable A
+#### Cable Setup step 2: Both cables cut into separate ends, non USB-A connector cut off of cable A
 
 ```
 A1                                                                                                     [USB-A]-[5" Jacket]
@@ -155,7 +155,7 @@ B1                                                                              
 B2                                                                                                     [USB-A]-[5" Jacket]
 ```
 
-#### Cable step 4: Cable jacket stripped to red and black signal wires, signal wires stripped to bare copper
+#### Cable Setup step 4: Cable jacket stripped to red and black signal wires, signal wires stripped to bare copper
 
 ```
 A1                                                                [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
@@ -166,7 +166,7 @@ B1                                                             [USB-Mini]-[3.5" 
 B2                                                                [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
 ```
 
-#### Cable Step 6: Final cable configuration with 10Ω 5W resistors
+#### Cable Setup Step 6: Final cable configuration with 10Ω 5W resistors
 
 ```
 A        [0.5" Bare Wire]-[1" Signal Wires]-[4" Jacket]-[1" Signal Wires]-[Resist]-[1" Signal Wires]-[3.5" Jacket]-[USB-A]
@@ -196,7 +196,7 @@ B                              [USB-Mini]-[3.5" Jacket]-[1" Signal Wires]-[Resis
 
 > [!NOTE]
 > The Pictoral Circuit Diagram is missing key information:  
-> - The USB power icon refers to Cable A and The Arduino needs to be plugged into the INIU portable via Cable B. See items 7, 3, 8 in [Electronic Components](#electronic-components).  
+> - The USB power icon refers to Cable A, and, The Arduino needs to be plugged into the INIU portable via Cable B. See items 7, 3, 8 in [Electronic Components](#electronic-components).  
 > - Both the USB cable to the Arduino and transistor need to have a 10Ω 5W resistor to prevent the INIU battery from performing automatic shutoff.  
 
 > [!TIP]
