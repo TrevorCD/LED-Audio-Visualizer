@@ -1,26 +1,28 @@
 # LED Audio Visualizer
 <div width="100%">
   <img align="left" src="images/constructed.jpg" width="38.197%"/>
+
+  <h2>Overview</h2>
   
   <p>
     This project uses an Arduino Nano and an MAX4466 (electret microphone amplifier) breakout board to dynamically scale LED brightness in response to sound.
     The visual output resembles pre-programmed lighting, with brightness peaks smoothly matching to the beat of music.
     <br><br>
     To achieve this, the Arduino polls the MAX4466's analog output at 100Hz (adjustable), places the amplitude samples in a circular buffer, and uses the stored values to calculate a continuous average.
-    For each sample, the amplitude is compared to the running average to calculate the PWM output that drives the LEDs through an NPN transistor.
-    LED brightness scales from 0 (for samples at or below half the average) to 255 (for samples at or above twice the average), with intermediate values forming a smooth gradient.
+    For each sample, the amplitude is compared to the continuous average to scale LED brightness scales from 0 to 255.
     Custom 3D printed parts are used to house the electronics and battery.
   </p>
   <br>
-  <a href="https://www.youtube.com/watch?v=eAFF40k64hU" target="_blank">See it in action!</a>
-  <br>
+  
 </div>
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=eAFF40k64hU" target="_blank">See it in action!</a>
+</p>
 
 <br>
 
-## Overview
-
-### Requirements
+## Requirements
 * Arduino or most other microcontrollers
   * Low minimum specs: **4kb flash memory** and **500b RAM**
   * Must support: PWM, 2 GPIO Pins
@@ -33,22 +35,28 @@
 * Electronic and housing components [(see below)](#component-list)
 * Music
 
-### Usage
-This technology performs best in high amplitude environments such as concerts or festivals.  
+## Usage
+MAX4466 Amplitude is adjustable. On the breakout board featured in the [components](#electronic-components), the amp knob is a small, rotatable plate on the underside of the board.
+This project is designed for high amplitude environemnts; subsequently, the amplification is set to minimum for this project.
 
-#### Config
-* Set LED_PIN and MIC_PIN to appropriate digital PWM pin and analog pin on the Arduino
-* Timing adjustments:
-  * SAMPLE_TIME: The period in milliseconds over which amplitude is calculated. If SAMPLE_TIME = 10, sample rate = 100Hz.
-  * WINDOW_SIZE: The size of the circular buffer. Larger buffers take longer to adjust to new average sound levels. 
-  * RUNNING_ITERS: The number of samples taken before an inner average is added to the window. Large values allow accurate and long continuous averages in memory constrained environments. 
-  * Average period (seconds) = SAMPLE_TIME * WINDOW_SIZE * RUNNING_ITERS / 1000.
-* Sensitivity adjustments:
-  * PEAK: The coefficient of the continuous average for the brightness ceiling. ( brightness = max IF sample ≥ continuous_average * PEAK )
-  * VALLEY: The coefficient of the continous average for the brightness floor.  ( brightness = min IF sample ≤ continuous_avergae * VALLEY )
-
-> [!TIP]
-> MAX4466 Amplitude is adjustable. This project is designed for high amplitude environemnts; subsequently, the MAX4466 amplification was set to minimum for calibration.  
+### Config
+* Set `LED_PIN` and `MIC_PIN` to appropriate digital PWM pin and analog pin on the Arduino
+* **Timing adjustments:**
+  * `SAMPLE_TIME`: The period in milliseconds over which amplitude is calculated. If `SAMPLE_TIME` = 10, sample rate = 100Hz.
+  * `WINDOW_SIZE`: The size of the circular buffer. Larger buffers take longer to adjust to new average sound levels.
+  * `RUNNING_ITERS`: The number of samples taken before an inner average is added to the window. Large values allow accurate and long continuous averages in memory constrained environments.
+  
+    Average period (seconds) = `SAMPLE_TIME * WINDOW_SIZE * RUNNING_ITERS / 1000`
+  
+* **Sensitivity adjustments:**
+  * `PEAK`: The coefficient of the continuous average for the brightness ceiling.
+    
+    brightness = max IF sample ≥ continuous_average * PEAK
+    
+  * `VALLEY`: The coefficient of the continous average for the brightness floor.
+    
+    brightness = min IF sample ≤ continuous_average * VALLEY
+    
 
 <br>
 
@@ -81,10 +89,6 @@ This technology performs best in high amplitude environments such as concerts or
 2. With **transparent** PLA:
    * totemOrbFull.stl **- OR -** *both* totemOrbHalfBottom.stl *and* totemOrbHalfTop.stl <sub><sup>(with transparent PLA)</sup></sub>
 
-> [!WARNING]
-> The 10Ω resistor between the positive and negative USB wires ***must be ≥ 5 watts*** or you risk the resistor **exploding** or **catching fire**.  
-> ***ALSO***, you need **10Ω 5W resistors** in **BOTH** the USB cable powering the Arduino, **AND** the USB cable powering the LEDs.  
-
 <br>
 
 ## How to Build
@@ -110,6 +114,9 @@ This technology performs best in high amplitude environments such as concerts or
 2. Solder the Arduino, LEDs, 2N2222, and resistors to the PCB Board.
 3. Solder the red exposed wire of Cable A to the LEDs, and the black exposed wire to the 2N2222's emitter.
 4. For the connections between the Arduino and MAX4466, solder the breadboard wires to their respective pins and the MAX4466 breakout board.
+
+> [!WARNING]
+> The 10Ω resistors between in the USB cables ***MUST BE ≥ 5 WATTS*** or you risk the resistor **EXPLODING** OR **CATCHING FIRE**. 
 
 ### IV - Mount Electronics
 1. Feed the MAX4466 through totemBaseTop, between the outer wall and running supports, on the side with 2 screw holes.
@@ -140,23 +147,23 @@ B                                                                               
 #### Cable step 2: Both cables cut into separate ends, non USB-A connector cut off of cable A
 
 ```
-A                                                                                                      [USB-A]-[5" Jacket]
-.                                                                                                              [7" Jacket]
+A1                                                                                                     [USB-A]-[5" Jacket]
+A2                                                                                                             [7" Jacket]
 ```
 ```
-B                                                                                                   [USB-Mini]-[5" Jacket]
-.                                                                                                      [USB-A]-[5" Jacket]
+B1                                                                                                  [USB-Mini]-[5" Jacket]
+B2                                                                                                     [USB-A]-[5" Jacket]
 ```
 
 #### Cable step 4: Cable jacket stripped to red and black signal wires, signal wires stripped to bare copper
 
 ```
-A                                                                 [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
-.                                        [0.5" Bare Wire]-[1" Signal Wires]-[4" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
+A1                                                                [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
+A2                                       [0.5" Bare Wire]-[1" Signal Wires]-[4" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
 ```
 ```
-B                                                              [USB-Mini]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
-.                                                                 [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
+B1                                                             [USB-Mini]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
+B2                                                                [USB-A]-[3.5" Jacket]-[1" Signal Wires]-[0.5" Bare Wire]
 ```
 
 #### Cable Step 6: Final cable configuration with 10Ω 5W resistors
