@@ -2,8 +2,6 @@
 <div width="100%">
   <img align="left" src="images/constructed.jpg" width="38.197%"/>
 
-  <h2>Overview</h2>
-  
   <p>
     This project uses an Arduino Nano and an MAX4466 (electret microphone amplifier) breakout board to dynamically scale LED brightness in response to sound.
     The visual output resembles pre-programmed lighting, with brightness peaks smoothly matching to the beat of music.
@@ -12,6 +10,7 @@
     For each sample, the amplitude is compared to the continuous average to scale LED brightness scales from 0 to 255.
     Custom 3D printed parts are used to house the electronics and battery.
   </p>
+  <br>
   <br>
   
 </div>
