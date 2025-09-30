@@ -88,7 +88,7 @@ This project is designed for high amplitude environemnts; subsequently, the ampl
    * totemBaseMiddle.stl
    * totemBaseTop.stl
 2. With **transparent** PLA:
-   * totemOrbFull.stl **- OR -** *both* totemOrbHalfBottom.stl *and* totemOrbHalfTop.stl <sub><sup>(with transparent PLA)</sup></sub>
+   * totemOrbFull.stl **- OR -** *both* totemOrbHalfBottom.stl *and* totemOrbHalfTop.stl
 
 <br>
 
