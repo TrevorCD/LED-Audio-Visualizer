@@ -115,7 +115,7 @@ This project is designed for high amplitude environemnts; subsequently, the ampl
 2. Solder the Arduino, LEDs, 2N2222, and resistors to the PCB Board.
 3. Solder the red exposed wire of Cable A to the LEDs, and the black exposed wire to the 2N2222's emitter.
 4. For the connections between the Arduino and MAX4466, solder the breadboard wires to their respective pins and the MAX4466 breakout board.
-5. Snip the ends of the solid leads on the breadboard wires so that the connection is flush with the MAX4466 breakout board's topside.
+5. Snip the ends of the solid leads on the breadboard wires so that the connection is flush with the MAX4466 breakout board's topside, as well as the ends of the other wires  in steps 2, 3, and 4.
 
 > [!WARNING]
 > The 10Ω resistors between in the USB cables ***MUST BE ≥ 5 WATTS*** or you risk the resistor **EXPLODING** OR **CATCHING FIRE**. 
