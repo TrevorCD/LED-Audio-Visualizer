@@ -64,7 +64,7 @@ This project is designed for high amplitude environemnts; subsequently, the ampl
 
 ### Electronic Components
 1. 1x [Arduino Nano (ATMega328)](https://www.amazon.com/dp/B0CM3C3FCZ) <sub><sup>(or any comprable MCU)</sup></sub>
-2. 1x [MAX4466 (electret Bare Wire]phone and amp)](https://www.amazon.com/dp/B08N4FNFTR)
+2. 1x [MAX4466 (electret microphone and amp)](https://www.amazon.com/dp/B08N4FNFTR)
 3. 1x [INIU portable charger](https://www.amazon.com/dp/B09176JCKZ)
 4. 2x [10Ω 5W resistor](https://www.amazon.com/dp/B0DV3LVCJG)
 5. 6x 3.0~3.2V/20mA LEDs
